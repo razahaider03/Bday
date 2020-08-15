@@ -8,4 +8,7 @@ app/src/main/java/*
 !app/src/main/java/random
 app/src/main/java/random/*
 !app/src/main/java/random/calculate.java
-
+# Intellij IDEA generated files
+/.idea/
+/out/
+/Bday.iml
