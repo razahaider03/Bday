@@ -2,6 +2,7 @@ package random;
 
 import java.util.*;
 import java.util.Random;
+import java.util.Scanner;
 
 
 
@@ -9,12 +10,15 @@ public class calculate {
 
     public static
     void main ( String[] args ) {
-        System.out.println("hello everyone");
-        //System.out.println(day(28));
-        int count=2000,duplicate=0;
+        System.out.println("Hello everyone!");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of person & No. of simulation to be done");
+        int size = sc.nextInt();
+        int count = sc.nextInt();
+        sc.close();
+        int duplicate=0;
         for ( int i=0; i<count; i++ ) {
-            // day(28,i+1);
-            if (day(20,i+1)==1){
+            if (day(size,i+1)==1){
                 duplicate++;
             }
         }
@@ -24,7 +28,6 @@ public class calculate {
             Random rand=new Random();
             rand.setSeed(seed);
             List<Integer> Bday=new ArrayList<>(size);
-            // List<Integer> rep = new ArrayList<>(10); // for check which are same.
             int loop=0, same=0;
             do {
                 int days=rand.nextInt(365);
